@@ -23,8 +23,6 @@
     - Verificar se o sistema limita o número de caracteres aceitáveis no username e senha.
   - Testes de segurança:
     - Bloqueio após múltiplas tentativas de login inválidas (brute force).
-    - Prevenção de injeção SQL no campo de login.
-    - Garantir que a senha não é exibida em texto claro.
 - **Navegação**:
   - Visualização correta dos produtos no catálogo.
   - Filtragem e ordenação de produtos.
@@ -40,7 +38,6 @@
 
 ### Funcionalidades fora do escopo
 
-- Integração com sistemas de pagamento (não funcional no ambiente de demonstração).
 - Testes de performance detalhados (como simulações de carga).
 
 ---
@@ -155,7 +152,7 @@
 
 ## Lista de Bugs
 
-### Bug 001: Não é bloqueado usuario de criar cobrança com carrinho vazio
+### Bug 001: Não é bloqueado o usuario de criar cobrança com carrinho vazio
 
 - **Descrição**: Realizar compras sem adicionar nenhum produto ao carrinho de compras.
 - **Severidade**: Crítico
@@ -185,19 +182,6 @@
 - **Evidência**:
   ![Erro no Login](img/login-error.png)
 
-  ### Bug 003: Usuários podem inserir nomes de usuário ou senhas com um número excessivo de caracteres
-
-- **Descrição**: Acessar pagina de login, e inserir mais de 500 caracteres.
-- **Severidade**: Crítico
-- **Prioridade**: Alta
-- **Passos**:
-  1. Acesse a URL `https://www.saucedemo.com`.
-  2. Insira mais de 500 caracteres no campo de username.
-- **Resultado Esperado**: Mensagem clara informando o limite maximo de caracteres permitido "O nome de usuário deve ter no máximo 50 caracteres." é para senha "A senha deve ter no máximo 100 caracteres.".
-- **Resultado Real**: Mensagem de que usuario não esta cadastrado. `Epic sadface: Username and password do not match any user in this service
-`
-- **Evidência**:
-  ![Erro no Login](img/login-error.png)
 
 ## Sugestões de Melhorias UX/UI
 
